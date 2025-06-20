@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Labs - BookNest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<!-- Background image and overlay applied to body -->
+<body class="relative bg-cover bg-center bg-fixed text-black" style="background-image: url('libraryimage.jpg');">
+
+  <!-- Navbar -->
+<nav class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="logo.jpg" alt="Logo" class="w-10 h-10" />
+        <span class="font-bold text-xl">BookNest</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="hover:text-gray-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About Us</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact</a>
+
+        <!-- Services Dropdown -->
+<div class="relative">
+  <button id="servicesBtn" class="hover:text-gray-300 focus:outline-none">
+    Services ▾
+  </button>
+  <div id="servicesDropdown" class="hidden absolute bg-white text-black mt-2 rounded shadow-md w-48 z-10">
+    <a href="book-lending.html" class="block px-4 py-2 hover:bg-gray-200">Book Lending</a>
+    <a href="digital-resources.html" class="block px-4 py-2 hover:bg-gray-200">Digital Resources</a>
+    <a href="workshops-events.html" class="block px-4 py-2 hover:bg-gray-200">Workshops & Events</a>
+    <a href="research-assistance.html" class="block px-4 py-2 hover:bg-gray-200">Research Assistance</a>
+    <a href="computer-labs.html" class="block px-4 py-2 hover:bg-gray-200">Computer Labs</a>
+    
+  </div>
+</div>
+
+<script>
+  const servicesBtn = document.getElementById('servicesBtn');
+  const servicesDropdown = document.getElementById('servicesDropdown');
+
+  servicesBtn.addEventListener('click', () => {
+    servicesDropdown.classList.toggle('hidden');
+  });
+
+  // Optional: Close dropdown when clicking outside
+  window.addEventListener('click', (e) => {
+    if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
+      servicesDropdown.classList.add('hidden');
+    }
+  });
+</script>
+
+
+        <!-- Auth Buttons -->
+        <a href="login.html" class="bg-transparent border border-white px-4 py-1 rounded hover:bg-white hover:text-gray-800 transition">Login</a>
+        <a href="register.html" class="bg-white text-gray-800 px-4 py-1 rounded hover:bg-gray-200 transition">Register</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block text-white hover:bg-gray-700 rounded px-2 py-1">Home</a>
+      <a href="about.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">About Us</a>
+      <a href="contact.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">Contact</a>
+      <a href="login.html" class="block text-white border border-white rounded px-2 py-1 hover:bg-white hover:text-gray-800 transition">Login</a>
+      <a href="register.html" class="block bg-white text-gray-800 rounded px-2 py-1 hover:bg-gray-200 transition">Register</a>
+    </div>
+  </nav>
+
+ <!-- Main Content -->
+<main class="flex-grow max-w-5xl mx-auto p-4 mt-5">
+
+  <div class="card border-0 shadow-lg bg-light">
+    <div class="row g-0">
+
+      <!-- Image Carousel -->
+      <div class="col-md-6">
+        <div id="labCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded-start">
+            <div class="carousel-item active">
+              <img src="lab1.jpg" class="d-block w-100" alt="Lab View 1">
+            </div>
+            <div class="carousel-item">
+              <img src="lab2.jpg" class="d-block w-100" alt="Lab View 2">
+            </div>
+            <div class="carousel-item">
+              <img src="lab3.jpg" class="d-block w-100" alt="Students Using Computers">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#labCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#labCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="col-md-6 p-4">
+        <div class="card-body">
+          <h2 class="card-title text-success">Computer Labs</h2>
+          <p class="card-text text-dark">
+            Use our state-of-the-art computer labs for your <strong>research, assignments, and printing needs</strong>.
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-transparent text-primary">
+              💻 Free access to PCs and Macs
+            </li>
+            <li class="list-group-item bg-transparent text-info">
+              🖨️ Printing, scanning, and copying services
+            </li>
+            <li class="list-group-item bg-transparent text-warning">
+              🧩 Software for design, coding, and office work
+            </li>
+            <li class="list-group-item bg-transparent text-danger">
+              🧑‍💻 Assistance from lab staff
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Embedded Video -->
+    <p class="mb-2 text-blue-800">
+  Click the button below to watch a detailed video tour of our computer labs on YouTube.
+</p>
+
+<a href="https://youtu.be/J6o6y5CZxaA" target="_blank" rel="noopener noreferrer"
+   class="inline-block px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition">
+  Watch Video
+</a>
+
+
+
+</main>
+
+
+ <!-- Footer -->
+  <footer class="bg-black text-yellow-400 px-6 py-8 mt-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h2 class="text-lg font-semibold mb-3">Follow Us</h2>
+        <div class="flex justify-center md:justify-center space-x-4 text-xl">
+          <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold mb-3">Contact Us</h2>
+        <p><i class="fas fa-phone mr-2"></i>+0781457389</p>
+        <p><i class="fas fa-envelope mr-2"></i>booknest995@gmail.com</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold mb-3">Library Address</h2>
+        <p><i class="fas fa-map-marker-alt mr-2"></i>123/A, Main Street Ampara Road, Ampara</p>
+        <div class="mt-4 flex justify-center md:justify-center">
+          <img src="image04.jpg" alt="Library" class="w-20 h-20 object-contain" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-sm text-yellow-300">
+      © 2025 BookNest Library. All Rights Reserved.
+    </div>
+  </footer>
+
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

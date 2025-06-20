@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - City Library</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="relative bg-cover bg-center bg-fixed text-black" style="background-image: url('libraryimage.jpg');">
+
+<!-- Navbar -->
+<nav class="bg-black text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0 font-bold text-xl flex items-center space-x-2">
+        <img src="logo.jpg" alt="Logo" class="w-10 h-10" />
+        <span>BookNest</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-gray-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About Us</a>
+        <a href="services.html" class="hover:text-gray-300">Services</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact</a>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="login.html" class="bg-transparent border border-white px-4 py-1 rounded hover:bg-white hover:text-gray-800 transition">Login</a>
+        <a href="register.html" class="bg-white text-gray-800 px-4 py-1 rounded hover:bg-gray-200 transition">Register</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-black">
+  <a href="index.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">Home</a>
+  <a href="about.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">About Us</a>
+  <a href="services.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">Services</a>
+  <a href="contact.html" class="block text-white hover:bg-gray-700 rounded px-2 py-1">Contact</a>
+  <a href="login.html" class="block border border-white rounded px-2 py-1 text-white hover:bg-white hover:text-gray-800 transition">Login</a>
+  <a href="register.html" class="block bg-white text-gray-800 rounded px-2 py-1 hover:bg-gray-200 transition">Register</a>
+</div>
+
+<!-- Header -->
+<header class="container max-w-4xl mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center">
+  <h1 class="text-4xl font-extrabold text-blue-700 mb-3">Our Library Services</h1>
+  <p class="text-gray-700 text-lg leading-relaxed">
+    Discover the wide range of services BookNest Library offers to support your reading, research, and learning needs.
+  </p>
+</header>
+
+<!-- Services Cards -->
+<section class="container max-w-7xl mx-auto px-4 mb-12">
+  <div class="row g-4">
+    <!-- Service Cards (6 total) -->
+    <!-- Each with button data-bs-toggle + target -->
+
+    <!-- Example: Book Lending -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-primary fs-1"><i class="fas fa-book-open"></i></div>
+          <h5 class="card-title mb-3">Book Lending</h5>
+          <p class="card-text text-muted">Borrow books from our extensive collection.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBookLending">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for the rest (5 more below) -->
+    <!-- Service 2: Digital Resources -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-success fs-1"><i class="fas fa-laptop"></i></div>
+          <h5 class="card-title mb-3">Digital Resources</h5>
+          <p class="card-text text-muted">Access eBooks, journals, databases anytime.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDigitalResources">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3: Workshops & Events -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-purple fs-1" style="color:#6f42c1;"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h5 class="card-title mb-3">Workshops & Events</h5>
+          <p class="card-text text-muted">Join learning workshops and community talks.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalWorkshops">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4: Research Assistance -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-danger fs-1"><i class="fas fa-headset"></i></div>
+          <h5 class="card-title mb-3">Research Assistance</h5>
+          <p class="card-text text-muted">Help from expert librarians for your projects.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResearch">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5: Computer Labs -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-info fs-1"><i class="fas fa-computer"></i></div>
+          <h5 class="card-title mb-3">Computer Labs</h5>
+          <p class="card-text text-muted">Access internet and resources on-site.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLabs">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 6: Community Programs -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm text-center">
+        <div class="card-body">
+          <div class="mb-3 text-warning fs-1"><i class="fas fa-users"></i></div>
+          <h5 class="card-title mb-3">Community Programs</h5>
+          <p class="card-text text-muted">Family and literacy events for everyone.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCommunity">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-yellow-400 px-6 py-8 mt-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <div>
+      <h2 class="text-lg font-semibold mb-3">Follow Us</h2>
+      <div class="flex justify-center md:justify-center space-x-4 text-xl">
+        <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+        <a href="#"><i class="fab fa-facebook hover:text-blue-600"></i></a>
+        <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
+        <a href="#"><i class="fab fa-whatsapp hover:text-green-400"></i></a>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-lg font-semibold mb-3">Contact Us</h2>
+      <p><i class="fas fa-phone"></i> +0781457389</p>
+      <p><i class="fas fa-envelope"></i> booknest995@gmail.com</p>
+    </div>
+    <div>
+      <h2 class="text-lg font-semibold mb-3">Library Address</h2>
+      <p><i class="fas fa-map-marker-alt"></i> 123/A, Main Street Ampara Road, Ampara</p>
+      <img src="image04.jpg" class="w-20 h-20 mx-auto mt-4" />
+    </div>
+  </div>
+  <div class="mt-6 text-center text-sm text-yellow-300">
+    © 2025 BookNest Library. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Modals -->
+<div class="modal fade" id="modalBookLending" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Book Lending</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">Borrow books from fiction to academic with flexible return options.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<div class="modal fade" id="modalDigitalResources" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Digital Resources</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">Access eBooks, research papers, and journals 24/7 via your ID.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<div class="modal fade" id="modalWorkshops" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Workshops & Events</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">Interactive workshops, author meetups, and seasonal library events.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<div class="modal fade" id="modalResearch" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Research Assistance</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">Librarians help you with citations, references, and topic research.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<div class="modal fade" id="modalLabs" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Computer Labs</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">Use our PCs to access databases, type assignments or browse safely.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<div class="modal fade" id="modalCommunity" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Community Programs</h5><button class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">We host book clubs, family literacy activities, and holiday programs.</div>
+  <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div>
+</div>
+
+<!-- Bootstrap JS (required for modals) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
